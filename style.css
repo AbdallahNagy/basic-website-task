@@ -25,6 +25,19 @@
     margin-left: 5px;
 }
 
+.icon a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.phone a{
+    color: inherit;
+}
+
+.arrow-left a, .arrow-right a{
+    color: inherit;
+}
+
 /* navbar */
 .navbar {
     z-index: 2;
