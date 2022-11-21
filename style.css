@@ -58,7 +58,7 @@
     margin-left: 5px;
 }
 
-.navbar ul {
+.navbar > ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -66,33 +66,41 @@
     width: 70%;
 }
 
-.navbar ul li {
+.navbar > ul > li {
     list-style: none;
 }
 
-.navbar ul li a {
+.navbar > ul > li > a ,.navbar > ul > li > .dropdown > a {
     padding: 20px;
     text-decoration: none;
     color: inherit;
 }
 
-.navbar ul li.active a {
+.navbar > ul > li.active > a {
     background-color: brown;
     color: inherit;
 }
 
-.navbar ul li a:hover {
+.navbar > ul > li > a:hover , .navbar > ul > li > .dropdown > a:hover {
     background-color: brown;
     color: inherit;
+}
+
+/* we have to hover over the dropdown div that contains the 
+button and the drop down list to display the list
+if we hovered over just <a> tag it won't work */
+
+.navbar ul li .dropdown:hover .dropdown-list {
+    display: block;
 }
 
 /* dropdown-list list*/
 div.dropdown-list {
     position: absolute;
     display: none;
-    top: 50px;
-    left: 20px;
-    background-color: yellow;
+    top: 67px;
+    left: 920px;
+    background-color: #282a35;
     height: 150px;
     width: 400px;
 }
@@ -113,15 +121,16 @@ div.dropdown-list ul li a{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
-    padding-left: 5px;
+    color: brown;
+    margin-left: -20px;
+    /* padding-left: 5px; */
     height: 100%;
     width: 100%;
 }
 
 div.dropdown-list ul li a:hover{
-    background-color: black;
-    color: yellow;
+    background-color: brown;
+    color: black;
 }
 
 .intro {
